@@ -4,6 +4,7 @@
   "description": "Algebraic sum types for TypeScript, designed after Rust's enums",
   "main": "dist/index.js",
   "scripts": {
+    "build": "tsc -p ./tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/Kinrany/typescript-sum-types/issues"
   },
-  "homepage": "https://github.com/Kinrany/typescript-sum-types#readme"
+  "homepage": "https://github.com/Kinrany/typescript-sum-types#readme",
+  "devDependencies": {
+    "tslib": "^1.10.0",
+    "typescript": "^3.5.1"
+  },
+  "dependencies": {}
 }

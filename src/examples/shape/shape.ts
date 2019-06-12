@@ -1,6 +1,5 @@
-import { create_enum_namespace, type, EnumUnion} from '../..';
-
-type Point = [number, number];
+import { create_enum_namespace, type, EnumUnion} from 'lib';
+import Point from './point';
 
 const Shape = create_enum_namespace({
   Unit: type(),
