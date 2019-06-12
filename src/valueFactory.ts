@@ -6,7 +6,7 @@ export interface ValueFactory<
 }
 
 export function id<T extends unknown[] = never[]>(): ValueFactory<T, T>;
-export function id<T>(): ValueFactory<[T], [T]>;
+export function id<T extends Exclude<unknown, unknown[]>>(): ValueFactory<[T], [T]>;
 export function id<T1, T2>(): ValueFactory<[T1, T2], [T1, T2]>;
 export function id<T1, T2, T3>(): ValueFactory<[T1, T2, T3], [T1, T2, T3]>;
 export function id<T1, T2, T3, T4>(): ValueFactory<[T1, T2, T3, T4], [T1, T2, T3, T4]>;
