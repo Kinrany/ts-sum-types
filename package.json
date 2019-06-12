@@ -4,7 +4,9 @@
   "description": "Algebraic sum types for TypeScript, designed after Rust's enums",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p ./tsconfig.json",
     "prepublishOnly": "npm run build",
