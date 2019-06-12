@@ -1,6 +1,6 @@
 {
   "name": "ts-sum-types",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Algebraic sum types for TypeScript, designed after Rust's enums",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
