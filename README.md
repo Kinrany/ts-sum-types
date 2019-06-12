@@ -1,4 +1,4 @@
-# typescript-sum-types
+# ts-sum-types
 
 ## Overview
 Algebraic sum types (*aka* [tagged unions]) for TypeScript.
@@ -11,7 +11,7 @@ Designed after [Rust's enums].
 ## Installation
 
 ```bash
-npm install --save typescript-sum-types
+npm install --save ts-sum-types
 ```
 
 This library exports a ES6 module with types.

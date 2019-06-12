@@ -1,5 +1,5 @@
 {
-  "name": "typescript-sum-types",
+  "name": "ts-sum-types",
   "version": "0.1.0",
   "description": "Algebraic sum types for TypeScript, designed after Rust's enums",
   "main": "dist/lib/index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kinrany/typescript-sum-types.git"
+    "url": "git+https://github.com/Kinrany/ts-sum-types.git"
   },
   "keywords": [
     "typescript",
@@ -22,9 +22,9 @@
   "author": "kinrany",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Kinrany/typescript-sum-types/issues"
+    "url": "https://github.com/Kinrany/ts-sum-types/issues"
   },
-  "homepage": "https://github.com/Kinrany/typescript-sum-types#readme",
+  "homepage": "https://github.com/Kinrany/ts-sum-types#readme",
   "devDependencies": {
     "tslib": "^1.10.0",
     "typescript": "^3.5.1"
