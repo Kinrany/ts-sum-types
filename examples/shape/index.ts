@@ -24,3 +24,5 @@ export default function shape_test() {
     });
   }
 }
+
+shape_test();

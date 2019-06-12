@@ -1,22 +1,3 @@
-# ts-sum-types
-
-## Overview
-Algebraic sum types (aka [tagged unions]) for TypeScript.
-
-Designed after [Rust's enums].
-
-[tagged unions]: https://en.wikipedia.org/wiki/Tagged_union
-[Rust's enums]: https://doc.rust-lang.org/stable/rust-by-example/custom_types/enum.html
-
-## Installation
-
-```bash
-npm install --save ts-sum-types
-```
-
-This library exports a ES6 module with types.
-
-```typescript
 import { create_enum_namespace, type, EnumUnion} from 'ts-sum-types';
 
 // Create an `enum` to classify a web event.
@@ -33,7 +14,7 @@ const WebEvent = create_enum_namespace({
 type WebEvent = EnumUnion<typeof WebEvent>;
 
 // A function which takes a `WebEvent` enum as an argument
-function inspect(event: WebEvent) {
+export function inspect(event: WebEvent) {
   event.match({
     PageLoad: () => console.log("page loaded"),
     PageUnload: () => console.log("page unloaded"),
@@ -46,17 +27,5 @@ function inspect(event: WebEvent) {
     },
   });
 }
-```
 
-## Development
-
-```bash
-npm install
-npm run build
-npm publish
-```
-
-## Prior art
-
-- [pelotom/unionize](https://github.com/pelotom/unionize)
-- [twop/ts-union](https://github.com/twop/ts-union)
+inspect(WebEvent.Click({x: 100, y: 200}));
