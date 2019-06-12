@@ -52,7 +52,6 @@ function inspect(event: WebEvent) {
 
 ```bash
 npm install
-npm run test
 npm run build
 ```
 

@@ -1,4 +1,4 @@
-import { create_enum_namespace, type, EnumUnion} from 'lib';
+import { create_enum_namespace, type, EnumUnion} from 'ts-sum-types';
 import Point from './point';
 
 const Shape = create_enum_namespace({

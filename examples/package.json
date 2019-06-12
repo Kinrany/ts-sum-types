@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "author": "kinrany",
+  "license": "MIT",
+  "dependencies": {
+    "ts-sum-types": "^0.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.1"
+  }
+}
