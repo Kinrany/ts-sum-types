@@ -1,25 +1,23 @@
 import {TagType, TagArrayMap} from './util';
 import {Variant} from './variant';
-import {ValueFactory} from './valueFactory';
+import {ValueFactory, DestructValueFactory} from './valueFactory';
 
-export interface VariantFactory<
+export type VariantFactory<
   Tag extends TagType,
   ArgsMap extends TagArrayMap<Tag>,
   ValueMap extends TagArrayMap<Tag>
-> {
-  (...args: ArgsMap[Tag]): Variant<
-    {[a_Tag in Tag]: ValueMap[a_Tag]}
-  >;
-}
+>
+  = <T extends Tag>(...args: ArgsMap[T]) => Variant<Record<T, ValueMap[T]>>;
 
 export function VariantFactory<
   Tag extends TagType,
-  Args extends unknown[],
-  Value extends unknown[]
->(tag: Tag, fn: ValueFactory<Args, Value>): VariantFactory<
+  Fn extends ValueFactory<Tag>
+>(tag: Tag, fn: Fn): VariantFactory<
   Tag,
-  TagArrayMap<Tag, Args>,
-  TagArrayMap<Tag, Value>
+  DestructValueFactory<Fn>['argsMap'],
+  DestructValueFactory<Fn>['valueMap']
 > {
-  return (...args: Args) => Variant<Tag, Record<Tag, Value>>(tag, fn(...args));
+  type ArgsMap = DestructValueFactory<Fn>['argsMap'];
+
+  return (...args: ArgsMap[Tag]) => Variant(tag, fn<Tag>(...args));
 }

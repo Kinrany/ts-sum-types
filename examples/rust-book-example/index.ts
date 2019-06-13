@@ -1,17 +1,17 @@
-import { create_enum_namespace, type, EnumUnion} from 'ts-sum-types';
+import {SumType, id, SumTypeVariant} from 'ts-sum-types';
 
 // Create an `enum` to classify a web event.
-const WebEvent = create_enum_namespace({
+const WebEvent = SumType({
   // An `enum` may either be `unit-like`,
-  PageLoad: type(),
-  PageUnload: type(),
+  PageLoad: id(),
+  PageUnload: id(),
   // like tuple structs,
-  KeyPress: type<number>(),
-  Paste: type<string>(),
+  KeyPress: id<number>(),
+  Paste: id<string>(),
   // or like structures.
-  Click: type<{ x: number; y: number }>(),
+  Click: id<{ x: number; y: number }>(),
 });
-type WebEvent = EnumUnion<typeof WebEvent>;
+type WebEvent = SumTypeVariant<typeof WebEvent>;
 
 // A function which takes a `WebEvent` enum as an argument
 export function inspect(event: WebEvent) {
