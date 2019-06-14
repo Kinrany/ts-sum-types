@@ -1,3 +1,2 @@
-export {id} from './valueFactory';
-export {SumType} from './sumType';
-export {SumTypeVariant} from './sumTypeVariant';
+export {Sum} from './sum';
+export {type} from './type';
